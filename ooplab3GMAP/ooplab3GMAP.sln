@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ooplab3GMAP", "ooplab3GMAP\ooplab3GMAP.csproj", "{EEF87BBE-02D0-4E66-A006-4726A74E27F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEF87BBE-02D0-4E66-A006-4726A74E27F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEF87BBE-02D0-4E66-A006-4726A74E27F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEF87BBE-02D0-4E66-A006-4726A74E27F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEF87BBE-02D0-4E66-A006-4726A74E27F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3FCC9E46-611E-4905-9B11-9FAC6CD5AAB6}
+	EndGlobalSection
+EndGlobal
