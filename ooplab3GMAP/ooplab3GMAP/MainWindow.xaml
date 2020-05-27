@@ -26,7 +26,7 @@
         <Label x:Name="Lresult" Content="result of search:" HorizontalAlignment="Left" Margin="10,309,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="LBresultofsearch" HorizontalAlignment="Left" Height="85" Margin="106,309,0,0" VerticalAlignment="Top" Width="118" SelectionChanged="LBresultofsearch_SelectionChanged"/>
         <Grid x:Name="gmap" HorizontalAlignment="Left" Height="350" Margin="292,10,10,10" VerticalAlignment="Bottom" Width="490">
-            <WindowsPresentation:GMapControl Name="Map" Loaded="MapLoaded" MouseDoubleClick="Map_MouseDoubleClick"/>
+            <WindowsPresentation:GMapControl Name="Map" Loaded="MapLoaded" MouseDoubleClick="Map_MouseDoubleClick" MouseRightButtonDown="Map_MouseRightButtonDown" MouseLeftButtonDown="Map_MouseLeftButtonDown"/>
         </Grid>
         <Label x:Name="Lx" Content="0" HorizontalAlignment="Left" Margin="168,33,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Ly" Content="0" HorizontalAlignment="Left" Margin="168,52,0,0" VerticalAlignment="Top"/>

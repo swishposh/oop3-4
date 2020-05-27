@@ -21,11 +21,11 @@ namespace ooplab3GMAP
             this.point = Point;
         }
 
-        public override double getDistance(PointLatLng point)
+        public override double getDistance(PointLatLng point1)
         {
             // точки в формате System.Device.Location 
             GeoCoordinate c1 = new GeoCoordinate(point.Lat, point.Lng);
-            GeoCoordinate c2 = new GeoCoordinate(point.Lat, point.Lng);
+            GeoCoordinate c2 = new GeoCoordinate(point1.Lat, point1.Lng);
 
             // вычисление расстояния между точками в метрах 
             double distance = c1.GetDistanceTo(c2);

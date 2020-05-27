@@ -336,5 +336,46 @@ namespace ooplab3GMAP
             else
                 progressLine.Value = 0;
         }
+      
+        private void Map_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            LBresultofsearch.Items.Clear();
+            
+            double min = new double();
+            MapObjectBase @object = null;
+
+            PointLatLng point = Map.FromLocalToLatLng((int)e.GetPosition(Map).X, (int)e.GetPosition(Map).Y);
+       
+            if (mapObjects.Count != 0)
+                min = mapObjects[0].getDistance(point);
+            foreach (MapObjectBase obj in mapObjects)
+            {
+                if (min > obj.getDistance(point))
+                {
+                    min = obj.getDistance(point);
+                    @object = obj;
+                }
+                else
+                {
+                    min = mapObjects[0].getDistance(point);
+                    @object = mapObjects[0];
+                }
+            }
+            if (@object != null)
+                foreach (MapObjectBase obj in mapObjects)
+                {
+                    string mapObjectAndDistanceString = new StringBuilder()
+                    .Append(obj.getName())
+                    .Append(" - ")
+                    .Append(obj.getDistance(point).ToString("0.##"))
+                    .Append(" м.").ToString();
+                    LBresultofsearch.Items.Add(mapObjectAndDistanceString);
+                }
+        }
+
+        private void Map_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
