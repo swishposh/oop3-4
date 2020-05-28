@@ -337,39 +337,23 @@ namespace ooplab3GMAP
                 progressLine.Value = 0;
         }
       
+
         private void Map_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
             LBresultofsearch.Items.Clear();
-            
-            double min = new double();
-            MapObjectBase @object = null;
 
             PointLatLng point = Map.FromLocalToLatLng((int)e.GetPosition(Map).X, (int)e.GetPosition(Map).Y);
+
+            List <MapObjectBase> SortedList = mapObjects.OrderBy(obj => obj.getDistance(point)).ToList();
        
-            if (mapObjects.Count != 0)
-                min = mapObjects[0].getDistance(point);
-            foreach (MapObjectBase obj in mapObjects)
-            {
-                if (min > obj.getDistance(point))
+                foreach (MapObjectBase obj in SortedList)
                 {
-                    min = obj.getDistance(point);
-                    @object = obj;
-                }
-                else
-                {
-                    min = mapObjects[0].getDistance(point);
-                    @object = mapObjects[0];
-                }
-            }
-            if (@object != null)
-                foreach (MapObjectBase obj in mapObjects)
-                {
-                    string mapObjectAndDistanceString = new StringBuilder()
+                    string dist = new StringBuilder()
                     .Append(obj.getName())
-                    .Append(" - ")
+                    .Append(": ")
                     .Append(obj.getDistance(point).ToString("0.##"))
                     .Append(" м.").ToString();
-                    LBresultofsearch.Items.Add(mapObjectAndDistanceString);
+                    LBresultofsearch.Items.Add(dist);
                 }
         }
 
